@@ -1,0 +1,57 @@
+
+.cart {
+	height: auto;
+	position: relative;
+}
+
+.column {
+	vertical-align: middle;
+	display: inline-block;
+	text-align: center;
+	width: 19%;
+}
+
+.row:after { /*Fix to cart height obtaining*/
+	content: "&nbsp;";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+	line-height: 0;
+}
+
+.column-name {
+	text-align: left;
+}
+
+.header {
+	font-weight: bold;
+}
+
+.header > .column-name {
+	text-align: center;
+}
+.column-name {
+}
+
+.row {
+	height: auto;
+	position: relative;
+	/*display: table-cell;*/
+}
+
+.fotter {
+	margin-top: 1%;
+}
+
+.fotter > button {
+	margin-right: 3%;
+}
+
+dd {
+	text-align: start;
+}
+
+dt {
+	text-align: left;
+}

@@ -1,103 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Корзина</title> 
-	<meta name="title" content="Корзина">
-	<meta name="description" content="Корзина">
-	<meta http-equiv="content-language" content="ru">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta charset="utf-8">
-</head>
+	<head>
+		<title>Корзина</title> 
+		<meta name="title" content="Корзина">
+		<meta name="description" content="Корзина">
+		<meta http-equiv="content-language" content="ru">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<link href="/css/basket.css" rel="stylesheet">
+	</head>
 
-<body>       
+	<body>       
 
-<h1>Корзина</h1>
-
-<form>
-    <fieldset>
-		<table>
-			<thead>
-				<tr>
-					<th>Название товара</th>
-					<th>Категория товара</th>
-					<th>Цена за 1 артикул</th>
-					<th>Количество</th>
-					<th>Действия</th>
-				</tr>
-			</thead>
-
-			<tfoot>
-				<tr>
-					<td colspan="50">
-						<button type="button" title="Продолжить покупки">
-							<span>Добавить еще одно наименование в корзину</span>
-						</button>
-						
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						
-						<button type="button" title="Продолжить покупки">
-							<span>Сделать заказ</span>
-						</button>
-					</td>
-				</tr>
-			</tfoot>
-
-			<tbody>
-				<tr>
-					<td>Редиска</td>
-					
-					<td>                                
-						<dl>
-							<dt><a href="#">Овощи и фрукты</a>&nbsp;&nbsp; &gt; &nbsp;&nbsp;</dt>
-							<dd><a href="#">Овощи</a></dd>
-						</dl>
-					</td>
-
-					<td>    
-					    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                    
-						<span>120</span><span> грн.</span>
-					</td>                        
-					
-					 <td>
-					    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<input style="margin-top: -5px; text-align: center" title="Количество" type="number" min="1" maxlength="3" size="5" value="1" />
-					</td>
-
-					<td>
-					    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<a href="#" title="Удалить товар из корзины">Удалить товар</a>
-					</td>
-				</tr>  
-				
-				<tr>
-					<td>Арбуз</td>
-					
-					<td>                                
-						<dl>
-							<dt><a href="#">Овощи и фрукты</a>&nbsp;&nbsp; &gt; &nbsp;&nbsp;</dt>
-							<dd><a href="#">Фрукты</a></dd>
-						</dl>
-					</td>
-
-					<td>    
-					    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                    
-						<span>150</span><span> грн.</span>
-					</td>                        
-					
-					 <td>
-					    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<input style="margin-top: -5px; text-align: center" title="Количество" type="number" min="1" maxlength="3" size="5" value="2" />
-					</td>
-
-					<td>
-					    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<a href="#" title="Удалить товар из корзины">Удалить товар</a>
-					</td>
-				</tr>    
-			</tbody>
-		</table>
-	</fieldset>
-</form>
-       
-</body>
+		<h1>Корзина</h1>
+		<div class="cart">
+			<div class="row header">
+				<div class="column column-name">Название товара</div>
+				<div class="column column-cat">Категория товара</div>
+				<div class="column column-price">Цена за 1 артикул</div>
+				<div class="column column-count">Количество</div>
+				<div class="column column-actions">Действия</div>
+			</div>
+			<form>
+				<fieldset>
+					<div class="row">
+						<div class="column column-name">Редиска</div>
+						<div class="column column-cat">
+							<dl>
+								<dt><a href="#">Овощи и фрукты</a> &gt; </dt>
+								<dd><a href="#">Овощи</a></dd>
+							</dl>
+						</div>
+						<div class="column column-price"><span>120</span><span> грн.</span></div>
+						<div class="column column-count">
+							<input style="margin-top: -5px; text-align: center" title="Количество" type="number" min="1" value="1" />
+						</div>
+						<div class="column column-actions">
+							<a href="#" title="Удалить товар из корзины">Удалить товар</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="column column-name">Арбуз</div>
+						<div class="column column-cat">
+							<dl>
+								<dt><a href="#">Овощи и фрукты</a> &gt; </dt>
+								<dd><a href="#">Фрукты</a></dd>
+							</dl>
+						</div>
+						<div class="column column-price"><span>150</span><span> грн.</span></div>
+						<div class="column column-count">
+							<input style="margin-top: -5px; text-align: center" title="Количество" type="number" min="1" value="2" />
+						</div>
+						<div class="column column-actions">
+							<a href="#" title="Удалить товар из корзины">Удалить товар</a>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+			<div class="row fotter">
+				<button type="button" title="Продолжить покупки">
+					<span>Добавить еще одно наименование в корзину</span>
+				</button>
+				<button type="button" title="Продолжить оформление заказа">
+					<span>Сделать заказ</span>
+				</button>
+			</div>
+		</div>
+	</body>
 </html>
