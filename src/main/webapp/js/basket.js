@@ -2,7 +2,13 @@
 window.onload = function init() {
 	// Init click eventlistener on add position btn
 	document.getElementsByClassName('row fotter')[0].children[0].onclick = btnAddClick;
-}
+	// Init click eventListener on remove action on every existing row
+	var actions = document.getElementsByTagName('fieldset')[0].getElementsByClassName('column column-actions');
+	for (var i = 0; i < actions.length; i++) {
+		console.log(actions[i].children[0]);
+		actions[i].children[0].onclick = function(event) {removePosition(event);};
+	}
+};
 
 function Position(name, node, price, count) {
 	this.name = name;
@@ -42,7 +48,7 @@ function btnAddClick() {
 				  + '		<input style="margin-top: -5px; text-align: center" title="Количество" type="number" min="1" value="' + p.count + '" />'
 				  + '	</div>'
 				  + '	<div class="column column-actions">'
-				  + '		<a href="#" title="Удалить товар из корзины">Удалить товар</a>'
+				  + '		<a onclick="removePosition(event)" href="#" title="Удалить товар из корзины">Удалить товар</a>'
 				  + '	</div>'
 				  + '</div>';
 		// Bad practice, hastily patch
@@ -50,4 +56,10 @@ function btnAddClick() {
 	} else {
 		alert('Позиций больше нет!:(');
 	}
+}
+
+function removePosition(event) {
+	event = event || window.event;
+	//TODO: some element check
+	event.srcElement.parentElement.parentElement.remove(); //may be parent.removeChild will be preffered
 }
